@@ -36,3 +36,17 @@
 // {name: "Chelea", location: "Indianapolis", favoriteTv: "Friends"} 
 
 // ];
+
+
+const rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
+
+rainbow[4]
+
+const sam = {
+	favoriteFood: "Lobster",
+	hobby: "Biking",
+	location: "Chicago",
+	favoriteData: "Object"
+}
+
+console.log(sam.hobby)
