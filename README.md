@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# wdi-11-chi _curious-turtles
+# wdi-11-chi _curious-turtles_
 
 ---
 Title: JS Datatypes up thru Objects<br>
@@ -14,11 +14,14 @@ Competencies: Objects, Arrays, Loops <br>
 ---
 # Homework 3: Objects 
 
+
 1. Fork this repo
-2. Clone your fork of this repo.
-3. **Do all your work in the folder that is created by the clone**
-4. Make commits as indicated
-5. Submit w/ pull request. 
+2. In your terminal, go into your folder for today (should be something like `03_14_objects`)
+3. Clone your fork of this repo.
+4. Cloning will create a folder called wdi-11-hw-3-objects.  Go into that folder: `cd wdi-11-hw-3-objects`. **Do all your work inside of this folder**
+5. Make commits as indicated. (`git add -A` and then  `git commit -m "some message"`).
+6. When you finish (and if need to pause working on it), push your commits to your fork (`git push origin master`). **Remember: before you push,** make sure you don't have any staged or unstaged changes (when you run `git status`, it should say something like `working tree clean`).
+7. Submit by making a pull request. 
 
 ---
 
@@ -155,15 +158,10 @@ The commit message should read: <br>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "determined the bond films gross".
-<hr>
-
-If you're thinking about splitting this up into two days, this might be a nice stopping point.
-
-<hr>
 
 ## Digging Deeper 
 
-### CHALLENGE
+### Humdinger challenge
 
 `bondFilms` again!
 
@@ -179,11 +177,13 @@ You should arrive at this result by comparing the frequency of actors.
 
 _hint:_ Objects by definition have **unique** keys. Later in the problem you could create a new object wherein all the Bond actors are keys, and unique, with no doubles.
 
-_another hint:_ You might come to a place where you will want to iterate over an object. You can iterate over arrays, but did you know you can iterate over objects?
+_another hint:_ You might come to a place where you will want to iterate over an object. You can iterate over arrays, but did you know you can iterate over objects?  (_hint within a hint:_ You _did_ know. We talked about iterating over objects today.  What does that word mean, "iterate"?)
 
 You can either use `Object.keys()`, documentation [here - Object.keys](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
 Or, you can use a `for ... in` loop, documentation [here - for ... in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
+The idea here is to spend some time thinking about how to solve a problem, coming up with an approach in your mind, or with a piece of paper, before trying to code it out.  
 
 <br>
 
@@ -227,15 +227,15 @@ The commit message should read: <br>
 
 <hr>
 
-### Congrats! You have completed the homework.  Been annoyed with CSS?  Check out the sweet vids below or some other vids entirely and ask us in the early AM.
+#### Congrats! You have completed the homework.  Submit with a pull request. 
+
+#### Read [Eloquent Javascript](http://eloquentjavascript.net/01_values.html), chapters 1 through 4. Chapter 3, and chapter 4 to some extent, might go a little beyond what we've talked about.  It's ok if you're not fully grasping things in chapter 3, but Chapters 1 and 2 should feel like reviewing to you. This is a great thing to read on your phone on the train on the way in.
+
+#### If you read those chapters in Eloquent JavaScript, and you just can't get enough, check out these CSS vids.  
 
 ---
 
-![Dr. Crusher](http://i183.photobucket.com/albums/x54/TrueX-Ray/TNG%20Caption%20This/TNGCaption306c.jpg)
-
----
-
-## CSS resources if you just can't put your computer away
+## CSS resources 
 
 * [Box Model](https://www.youtube.com/watch?v=HNgdhp1_kEE&index=6&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J), 7:17
 
