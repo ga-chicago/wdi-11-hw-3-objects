@@ -29,28 +29,30 @@ const students = [
 	{ name: "Tyler", location: "Chicago"},
 	{ name: "Zoe", location: "Chicago"}
 ];
-	
+	// or 
+	const students = {
+	name: ['Alexis', 'Alyssa', 'Ben', 'Hanna', 'Irwin', 'James', 'Jim', 'Marie', 'Sam', 'Samat', 'Tyler', 'Zoe'],
+	location: "Chicago"
+}
+concole.log(students[1])
 
 // A list of student names from our class, each with a location and each with a list of favorite tv shows.
 
 const students = [
-	{ name: "Alexis", location: "Chicago" },
-	{ name: "Alyssa", location: "Chicago" },
-	{ name: "Ben", location: "Chicago" },
-	{ name: "Hanna", location: "Chicago" },
-	{ name: "Irwin", location: "Chicago" },
-	{ name: "James", location: "Chicago" },
-	{ name: "Jim", location: "Chicago" }
-	{name: "Sam", location: "Chicago" },
-	{ name: "Samat", location: "Chicago" },
-	{ name: "Tyler", location: "Chicago" },
-	{ name: "Zoe", location: "Chicago" }
+	{ name: "Alexis", location: "Chicago", tvShows: "comedy" },
+	{ name: "Alyssa", location: "Chicago", tvShows: "action" },
+	{ name: "Ben", location: "Chicago", tvShows: "comedy" },
+	{ name: "Hanna", location: "Chicago", tvShows: "suspense" },
+	{ name: "Irwin", location: "Chicago", tvShows: "mistery" },
+	{ name: "James", location: "Chicago", tvShows: "drama" },
+	{ name: "Jim", location: "Chicago", tvShows: "mistery" }
+	{name: "Sam", location: "Chicago", tvShows: "action" },
+	{ name: "Samat", location: "Chicago", tvShows: "comedy" },
+	{ name: "Tyler", location: "Chicago",tvShows: "drama" },
+	{ name: "Zoe", location: "Chicago", tvShows: "comedy" }
 ];
 
-const students = {
-	name: ['Alexis', 'Alyssa', 'Ben', 'Hanna', 'Irwin', 'James', 'Jim', 'Marie', 'Sam', 'Samat', 'Tyler', 'Zoe'],
-	location: "Chicago"
-}
+
 
 
 // A user's email address.
@@ -67,14 +69,18 @@ console.log(email)
 
 
 // Make an array that holds all of the colors of the rainbow.
-const rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+const rainbow = ["Red", "Orange", "indigo", "Blue", "yellow", "green"];
 console.log(rainbow)
 
-
-
-
-
 // Write code that will access "blue" from the rainbow array.
+rainbow[3]
+//this is what i did in the console
+const rainbow = ["Red", "Orange", "indigo", "Blue", "yellow", "green"];
+console.log(rainbow)
+VM44318:2 (6) ["Red", "Orange", "indigo", "Blue", "yellow", "green"]
+undefined
+rainbow[3]
+"Blue"
 
 
 // Make an object that is called your name and holds the information about your favorite food, 
@@ -88,8 +94,11 @@ const noemi = {
 	datatype: "object"
 };
 	console.log(noemi.datatype)
-
-
+//I checked if it was right and it printed 'object'
+console.log(noemi.hobby + noemi.datatype)
+// this printed 'volunteeringobject'
+console.log(noemi.hobby + ' ' + noemi.datatype)
+// i got it right 'volunteering object'
 
 
 
