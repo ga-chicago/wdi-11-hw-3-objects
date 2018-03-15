@@ -60,8 +60,53 @@ const students = {
 
 //////
 
+Take it Easy
+
+// Make an array that holds all of the colors of the rainbow.
+const rainbowArray = ['red', 'orange', 'yellow', 'green', 'blue', 'purple']
+
+// Write code that will access "blue" from the rainbow array.
+console.log(rainbowArray[4])
+
+// Make an object that is called your name and holds the information about your favorite food, 
+// a hobby, the name of the town that you live in currently, and your favorite datatype.
+
+const Irwin = {
+	food: 'lasagna',
+	hobby: 'biking',
+	town: 'Chicago',
+	dataType: 'arrays'
+}
+
+// Write code that will access your hobby from the object that you just created.
+ console.log(Irwin.hobby)
 
 
+// Object-ception
+
+With the following object:
+
+const inception = {
+   reality: {
+       dreamLayer1: {
+           dreamLayer2: {
+               dreamLayer3: {
+                   dreamLayer4: {
+                       dreamLayer5: {
+                           dreamLayer6: {
+                               limbo: "Joseph Gordon Levitt"
+                          }
+                       }
+                   }
+               }
+           }
+       }
+   }
+}
+
+//Change the value of limbo to null.
+
+inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = 'null'
 
 
 
