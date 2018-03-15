@@ -176,8 +176,11 @@ console.log(oddBonds);
 let sumOfGross = 0;
 
 for (let i = 0; i < bondFilms.length; i ++){
-	let newGross = bondFilms[i].gross.replace('$','');
-	sumOfGross += parseInt(bondFilms[i].newGross)
+
+	let gross1 = bondFilms[i].gross.replace($,'');
+  let gross2 = bondFilms[i].gross.replace(/,/g ,'');
+  let newGross = gross1 + gross2;
+	sumOfGross += parseInt(bondFilms[i].newGross);
 
 }
 
