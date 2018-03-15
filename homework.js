@@ -30,5 +30,21 @@ const studentList = [{
 const studentList = {
   Zoe: {
     location: "Evanston",
-    tv shows: ["Deadwood", "High Maintainence", "Planet Earth"]},
+    tvShows: ["Deadwood", "Unsolved Mysteries", "King of the Hill"]},
 }
+
+
+//TAKE IT EASY
+
+const rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"
+]
+
+console.log(rainbow[4])
+
+const zoe = {
+  favoriteFood: "a nice slice of 'za'",
+  hobby: "iron maiden karaoke",
+  currentTown: "EVAHNSTAHN",
+  favDataType: "strings"
+}
+console.log(zoe.hobby)
