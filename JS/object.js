@@ -193,7 +193,15 @@ console.log(sumOfGross);
 
 //1
 
-console.log(bondFilms[13]);
+const actorsList = [];
+
+
+for(let i = 0; i < bondFilms.length; i ++){
+	actorsList.push(bondFilms[i].actor);
+	
+}
+
+
 
 
 
