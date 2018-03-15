@@ -8,7 +8,7 @@
 // A list of student names from our class, each with a location.
 // A list of student names from our class, each with a location and each with a list of favorite tv sh
 
-// light switch = boolean  light switch === "true"
+// light switch = boolean  light switch === true
 // email address = string email: "sammintz1993@gmail.com"
 // space ship = array spaceShip = ["hull", "laser blasters", "tractor beam",  "warp drive".]
 // student name = array  studentNames = ["Sam", "Charlie", "Chelsea", "Frank"]
@@ -124,17 +124,14 @@ for(let i =  0; i <= bondFilms.length; i++) {
 // Determine the total cumulative gross of the Bond franchise, and console.log the result. hint To make the grosses into usable numbers, look into the .replace Javascript method (there are many ways to do this, however). Look into parseInt also.
 
 
-const totalCumulative = []
+const totalCumulative = 0;
+
+
+// stuck here 
 
 for(let i = 0; i <= bondFilms.length; i++) {
-	console.log((bondFilms[i].gross))  // before making an array. 
-}
+	let newCumulative = bondFilms[i].gross.replace("$","")
+	totalCumulative += parseInt(bondFilms[i].newCumulative)
 
-
-for(let i = 0; i <= bondFilms.length; i++) {
-	console.log(totalCumulative.push(bondFilms[i].gross))  // Moved gross into an array
-}
-
-Number.parseInt(bondFilms[i].gross, [10]) // stuck here 
-
+	console.log(totalCumulative);
 
