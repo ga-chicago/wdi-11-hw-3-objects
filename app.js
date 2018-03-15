@@ -140,22 +140,25 @@ for (let i = 0; i < bondFilms.length; i++) {
  
 // bond gross
 const grossArray = [];
+let bondGrossArray = [];
+let bondGrossArrayNum = [];
 let bondGross = 0
 
 for (let i = 0; i < bondFilms.length; i++) {
 	
 	grossArray.push(bondFilms[i].gross.slice(1));
-	bondGross += parseInt(grossArray[i]);
-	console.log(bondGross)
-	/*let bondGross = 0	for (let i = 0; i < bondFilms.length; i++) {
-		bondGross += groassArray[i]
-	}
-	console.log(bondGross)*/ 
+	bondGrossArray.push(grossArray[i].replace(/,/g, ''));
+
+	bondGrossArrayNum.push(parseInt(bondGrossArrayNum));
+
+	bondGross += parseInt(bondGrossArray[i]);
 }
 
-console.log(grossArray);
+// console.log(grossArray);
 
 // I can't get rid of the commas. I don't know what I'm doing. I know how to do it once they're gone but I'm so tired. 
+
+
 
 // humdinger
 
@@ -166,22 +169,20 @@ console.log(grossArray);
 // if there is a match, do nothing
 // if there is not a match, print that line to the console. 
 
-//none of the below works but I'm leaving it here in case future Hannah needs it to fix this garbage
 
-const bondActors = {};
+// the below code works in that it spits out everyone that matches the array of bond actors to the full list, but I haven't figured out how to get it to stop returning actors who had more than one match. It returns them when they have one match but also recognizes that they have more than one. 
 
-let uniqueBondActors = [];
+let counts = {};
 
-for (let i = 0; i < bondFilms.length; i++ ) {
-	let bondFilmsKeys = Object.keys(bondFilms[i])
-	bondActors. // WANT TO CREATE THIS AS A NEW OBJECT WITHIN THE BOND ACTORS OBJECT PROBABLY
-
-	push(bondFilms[i].actor) 
-	uniqueBondActors = bondActors.reduce(function(a,b){
-		if (a.indexOf(b) < 0) a.push(b);
-		return a;
-	}, []);
-	console.log(uniqueBondActors, bondActors)
+for (let i = 0; i < bondFilms.length; i++) {
+	let num = bondFilms[i].actor;
+	counts[num] = counts[num] ? counts[num] + 1 : 1;
+	keys(counts);
+	if (counts[bondFilms[i].actor] > 1) {
+		console.log(bondFilms[i].actor + " was in too many films")
+	} else {
+		console.log(bondFilms[i])
+	}
 }
 
 
@@ -189,30 +190,28 @@ for (let i = 0; i < bondFilms.length; i++ ) {
 
 
 
-// 	bondActors.name[i] = bondFilms[i].actor; // this gives all of them timothy dalton. which doesn't work. 
-// 	console.log(bondActors)
-// }
+//none of the below works but I'm leaving it here in case future Hannah needs it to fix this garbage
 
-// for (const actor in bondFilms) {
-// 	if (bondFilms[i])
-// }
+// let bondActors = [];
 
-// const actorCount = [];
+// let uniqueBondActors = [];
+
+// let actorObj = {};
+
+// let counts = {};
 
 // for (let i = 0; i < bondFilms.length; i++ ) {
-// 	if (i = 0) {
-// 		actorCount.push(bondFilms[i].actor);
-// 	} else if (i > 0 && bondFilms[i].actor === actorCount[i-1] {
-
+// 	// access the actor names from the original object and store them in the bondActors array
+// 	bondActors.push(bondFilms[i].actor);
+// 	// find duplicates, move them to their own array, remove from original
+// 	for (let j = 0; j < bondActors.length; j ++ ){
+// 		if(uniqueBondActors.indexOf(bondActors[i]) == -1) {
+// 			uniqueBondActors.push(bondActors[i])
+// 		}
+// 		uniqueBondActors.reduce(function(result, item, index, array) {
+// 		actorObj[index] = item;
 // 	})
+
 // }
-
-// measure frequency of actors
-// if actor is equal to actor of the previous object, push count 1 for repeats
-// if actor is not equal to actor of previous film, push actor object to new array
-
-// if repeats = 1, print that original string
-
-
-// iterate over object - if actor with least frequency is true, console.log that shit
+// }}
 
