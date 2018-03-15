@@ -258,10 +258,10 @@ for(i = 0; i < bondFilms.length; i++) {
 }
 
 //HUMDINGER challenge
-
+//get actors into seperate object and array number of bond films starred in
 let bondActors = {
-
 }
+//All good here
 for (let i = 0; i < bondFilms.length; i++){
   bondActors[bondFilms[i].actor] = []
 }
@@ -270,3 +270,11 @@ let actorKey = Object.keys(bondActors)
 for(let i = 0; i < bondFilms.length; i++) {
   bondActors[bondFilms[i].actor].push(bondFilms[i])
 }
+//This piece still doesnt work
+let oneOff = bondFilms
+ for (let i = 0; i < actorKey.length; i++) {
+   if (oneOff[actorKey[i]].length < oneOff.length)
+    oneOff = bondActors[actorKey[i]]
+ }
+
+//
