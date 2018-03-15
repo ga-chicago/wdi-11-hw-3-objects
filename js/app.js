@@ -14,4 +14,29 @@ const spaceship = ['hull', 'laser blaster', 'tractor beam', 'warp drive'];
 const ourClass = [
 	{ name: 'student1', location: 'new york', favTv: 'family guy' },
 	{ name: 'student2', location: 'LA', favTv: 'news' }
-]
+];
+
+
+
+
+
+// Take it easy
+// 1
+const rainbow = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+
+// 2
+rainbow[4];
+
+
+// 3
+const samat = {
+	food: 'pasta',
+	hobby: 'coding',
+	town: 'Chicago',
+	dataType: 'number'
+}
+
+
+// 4
+samat.hobby
