@@ -150,3 +150,12 @@ for (i = 0; i < bondFilms.length; i++){
 
 console.log(bondTitles);
 
+//ODD BONDS ARRAY
+
+let oddBonds = [];
+
+for (i = 0; i < bondFilms.length; i++){
+  if (bondFilms[i]["year"] % 2 === 1) {
+    oddBonds.push(bondFilms[i])
+  }
+};
