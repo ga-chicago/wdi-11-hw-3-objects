@@ -252,10 +252,10 @@ for (i = 0; i < bondFilms.length; i++){
 //   }
 // };
 
-let worstBond;
+// let worstBond;
 
-for (i = 0; i < bondFilms.length; i++){
+// for (i = 0; i < bondFilms.length; i++){
 
-}
+// }
 
-const worstBond = Math.min(actorOne.length, actorTwo.length, actorThree.length, actorFour.length, actorFive.length, actorSix.length);
+// const worstBond = Math.min(actorOne.length, actorTwo.length, actorThree.length, actorFour.length, actorFive.length, actorSix.length);
