@@ -157,6 +157,62 @@ console.log(grossArray);
 
 // I can't get rid of the commas. I don't know what I'm doing. I know how to do it once they're gone but I'm so tired. 
 
+// humdinger
+
+// the only one that won't have a match is george lazenby because he was only in one movie. so if I create an object of bond actors, I can iterate through that object. if it doesn't match any of the VALUES in that object
+
+// FUTURE HANNAH - READ THIS: 
+// you want to create the bondActor names as objects rather than as an array. once it is an object, you should be able to iterate over it and check for a match (copy logic from card game for check for match? )
+// if there is a match, do nothing
+// if there is not a match, print that line to the console. 
+
+//none of the below works but I'm leaving it here in case future Hannah needs it to fix this garbage
+
+const bondActors = {};
+
+let uniqueBondActors = [];
+
+for (let i = 0; i < bondFilms.length; i++ ) {
+	let bondFilmsKeys = Object.keys(bondFilms[i])
+	bondActors. // WANT TO CREATE THIS AS A NEW OBJECT WITHIN THE BOND ACTORS OBJECT PROBABLY
+
+	push(bondFilms[i].actor) 
+	uniqueBondActors = bondActors.reduce(function(a,b){
+		if (a.indexOf(b) < 0) a.push(b);
+		return a;
+	}, []);
+	console.log(uniqueBondActors, bondActors)
+}
 
 
+
+
+
+
+// 	bondActors.name[i] = bondFilms[i].actor; // this gives all of them timothy dalton. which doesn't work. 
+// 	console.log(bondActors)
+// }
+
+// for (const actor in bondFilms) {
+// 	if (bondFilms[i])
+// }
+
+// const actorCount = [];
+
+// for (let i = 0; i < bondFilms.length; i++ ) {
+// 	if (i = 0) {
+// 		actorCount.push(bondFilms[i].actor);
+// 	} else if (i > 0 && bondFilms[i].actor === actorCount[i-1] {
+
+// 	})
+// }
+
+// measure frequency of actors
+// if actor is equal to actor of the previous object, push count 1 for repeats
+// if actor is not equal to actor of previous film, push actor object to new array
+
+// if repeats = 1, print that original string
+
+
+// iterate over object - if actor with least frequency is true, console.log that shit
 
