@@ -124,8 +124,17 @@ for (let i = 0; i < bondFilms.length; i++) {
 
 console.log(oddBonds);
 
+//Bond Films Gross
 
+let totalGross;
+let parseIntFriendlyGross;
 
+for (let i = 0; i < bondFilms.length; i++) {
+	parseIntFriendlyGross = bondFilms[i]["gross"].replace(/\$/, '')
+	parseIntFriendlyGross = parseIntFriendlyGross.replace(/\,/g, '');
+	totalGross += parseInt(parseIntFriendlyGross);
+}
 
+console.log("$" + totalGross.toLocaleString('en-US'));
 
 
