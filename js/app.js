@@ -106,3 +106,19 @@ for(let i = 0; i < bondFilms.length; i++){
 		oddBonds.push(bondFilms[i]["title"])
 	}
 }
+
+//gross
+const numGross1 = [];
+const numGross2 = [];
+const numGross3 = [];
+for(let i = 0; i < bondFilms.length; i++){
+	numGross1.push(bondFilms[i]["gross"].replace("$", ""));
+	numGross2.push(numGross1[i].replace(/,/g, ""));
+	numGross3.push(parseInt(numGross2[i]));
+	console.log(numGross3[i])
+}
+
+let totalGross = 1;
+for(let i = 0; i < numGross3.length; i++ ){
+    totalGross += numGross3[i];
+}
