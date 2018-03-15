@@ -67,3 +67,25 @@ const studentNames3 = [{
 	favoriteTVShow: "Star Trek"
 }];
 
+// TAKE IT EASY
+
+// 1
+
+const rainbowColors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+// 2
+
+console.log(rainbowColors[4]);
+
+// 3
+
+const tylerEarls = {
+	favoriteFood: "Indian Food",
+	hobby: "Watching Star Trek",
+	location: "Chicago",
+	favoriteDataType: "objects"
+};
+
+// 4
+
+console.log(tylerEarls.object);
