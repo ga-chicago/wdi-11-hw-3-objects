@@ -159,3 +159,49 @@ for (i = 0; i < bondFilms.length; i++){
     oddBonds.push(bondFilms[i])
   }
 };
+
+// TOTAL BONDS FILMS GROSS
+
+// THIS WOULD HAVE WORKED IF THERE WEREN'T COMMAS IN THE GROSS VALUES
+// let bondsGrossInt = function {
+//   for (i = 0; i < bondFilms.length; i++){
+//     while (bondFilms[i].gross.charAt(0) === '$'){
+//       bondFilms[i].gross = bondFilms[i].gross.substr(1);
+//     };
+//   parseInt(bondFilms[i].gross);
+//   }
+// }  let removeGrossComma = [];
+
+let usableGrossString = [];
+
+for (i = 0; i < bondFilms.length; i++){
+  // removes $ sign at beginning of gross
+  while (bondFilms[i].gross.charAt(0) === '$'){
+    bondFilms[i].gross = bondFilms[i].gross.substr(1);
+  }; 
+  // removes commas from gross
+  const commaFinder = /,/gi;
+  usableGrossString.push(bondFilms[i].gross.replace(commaFinder, ''));
+};
+
+// at this point usableGrossString[] is an array
+// of all the bondFilms.gross values as strings without $ or commas
+
+let grossInt = [];
+
+for (i = 0; i < bondFilms.length; i++){
+  if (typeof(usableGrossString === 'string')){
+    grossInt.push(parseInt(usableGrossString[i]));  
+  };
+};
+
+// at this point grossInt[] has all the bondFilms.gross as integers in an array.
+// i just need to add them.
+
+// have to assign the total a value of 0 so it has an integer value 
+// and doesn't affect the sum value
+let totalGross = 0;
+
+for (i = 0; i < bondFilms.length; i++){
+  totalGross += grossInt[i];
+};
