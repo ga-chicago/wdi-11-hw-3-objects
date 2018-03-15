@@ -137,4 +137,41 @@ for (let i = 0; i < bondFilms.length; i++) {
 
 console.log("$" + totalGross.toLocaleString('en-US'));
 
+//Digging Deeper
 
+//Humdinger challenge
+
+const actorAppearances = {}; //declare object to store number of actor appearances
+
+for (let i = 0; i < bondFilms.length; i++) {
+	//add a conditional to avoid NaN error for empty actors
+	if (actorAppearances[bondFilms[i]["actor"]] > 0) {
+		//iterate actor appearance
+		actorAppearances[bondFilms[i]["actor"]] = actorAppearances[bondFilms[i]["actor"]] + 1; 
+	}
+	else {
+		actorAppearances[bondFilms[i]["actor"]] = 1;
+	}
+}
+
+//get the actors from the appearances object
+const actors = Object.keys(actorAppearances); 
+
+//set an initial value for lowestFrequency so we have something to compare against
+let lowestFreq = [actorAppearances[actors[0]],actors[0]]; 
+let actorFrequency;
+
+//compare each of the actor's frequencies to find the lowest
+for (let i = 0; i < actors.length; i++) {
+	actorFrequency = actorAppearances[actors[i]];
+	if (actorFrequency < lowestFreq[0]) {
+		lowestFreq = [actorFrequency,actors[i]];
+	}
+}
+
+//find and log all of the films that the actor with the lowest frequency was in
+for (let i = 0; i < bondFilms.length; i++) {
+	if (bondFilms[i]["actor"] === lowestFreq[1]) {
+		console.log(bondFilms[i]);
+	}
+}
