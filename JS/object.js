@@ -201,6 +201,8 @@ for(let i = 0; i < bondFilms.length; i ++){
 	
 }
 
+//I need help with this one. So i have actors name all in an array, i don't see why for ..in loop or object.key() would need to be used here. Isn't that used to iterate through Object keys?
+
 
 
 
