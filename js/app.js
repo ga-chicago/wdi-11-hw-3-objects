@@ -29,17 +29,7 @@ const students = [
 	{ name: "Tyler", location: "Chicago"},
 	{ name: "Zoe", location: "Chicago"}
 ];
-	name:
-	name:
-	name:
-	name;
-	name:
-	name:
-	name:
-	name:
-	name:
-	name:
-}
+	
 
 // A list of student names from our class, each with a location and each with a list of favorite tv shows.
 
@@ -64,6 +54,8 @@ const students = {
 
 
 // A user's email address.
+const email = []
+console.log(email)
 
 
 
@@ -72,12 +64,30 @@ const students = {
 
 // A spaceship with a hull, laser blasters, tractor beam, and warp drive.
 
+
+
 // Make an array that holds all of the colors of the rainbow.
+const rainbow = ["Red", "Orange", "Blackberry", "Blue"];
+console.log(rainbow)
+
+
+
+
+
 // Write code that will access "blue" from the rainbow array.
-// Make an object that is called your name and holds the information about your favorite food, a hobby, the name of the town that you live in currently, and your favorite datatype.
+
+
+// Make an object that is called your name and holds the information about your favorite food, 
+//a hobby, the name of the town that you live in currently, and your favorite datatype.
 // Write code that will access your hobby from the object that you just created.
 
-
+const noemi = {
+	favoriteFood: 'Italian',
+	hobby: 'volunteering',
+	town: 'Chicago',
+	datatype: "object"
+};
+	console.log(noemi.datatype)
 
 
 
