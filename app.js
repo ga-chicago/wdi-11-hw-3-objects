@@ -45,3 +45,21 @@ const class = [{
 	favoriteShows: ["WestWorld", "The Big Bang Theory", "Star Trek"]
 }]
 
+// Take it Easy
+
+// #1 
+const colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+
+// #2
+colors[4];
+
+// #3
+const Hannah = {
+	favoriteFood: "tacos",
+	hobby: "travel writing",
+	currentTown: "Chicago",
+	favoriteDatatype: "objects"
+}
+
+// #4
+Hannah.hobby 
