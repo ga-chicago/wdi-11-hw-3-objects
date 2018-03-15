@@ -137,6 +137,25 @@ for (let i = 0; i < bondFilms.length; i++) {
 	if (i === (bondFilms.length - 1)) {
 		console.log(oddBonds);
 }
+ 
+// bond gross
+const grossArray = [];
+let bondGross = 0
+
+for (let i = 0; i < bondFilms.length; i++) {
+	
+	grossArray.push(bondFilms[i].gross.slice(1));
+	bondGross += parseInt(grossArray[i]);
+	console.log(bondGross)
+	/*let bondGross = 0	for (let i = 0; i < bondFilms.length; i++) {
+		bondGross += groassArray[i]
+	}
+	console.log(bondGross)*/ 
+}
+
+console.log(grossArray);
+
+// I can't get rid of the commas. I don't know what I'm doing. I know how to do it once they're gone but I'm so tired. 
 
 
 
