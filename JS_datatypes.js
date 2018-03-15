@@ -120,3 +120,12 @@ for (let i = 0; i < bondFilms.length; i++) {
   bondTitles.push(bondFilms[i].title)
 }
 
+//Create a new array oddBonds, of only the Bond films released on odd-numbered years.
+
+const oddBonds = [];
+
+for (let i = 0; i < bondFilms.length; i++) {
+  if (bondFilms[i].year % 2 !==0) {console.log(oddBonds.push(bondFilms[i].title))}
+}
+
+
