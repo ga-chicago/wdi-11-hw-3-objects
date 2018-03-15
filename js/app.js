@@ -100,4 +100,9 @@ for(let i = 0; i < bondFilms.length; i++){
 	bondTitles.push(bondFilms[i]["title"])
 }
 
-
+const oddBonds = [];
+for(let i = 0; i < bondFilms.length; i++){
+	if(bondFilms[i]["year"] % 2 !== 0){
+		oddBonds.push(bondFilms[i]["title"])
+	}
+}
