@@ -245,3 +245,14 @@ for(let i = 0; i < bondFilms.length; i++) {
         oddBonds.push(bondFilms[i])
   }
 }
+
+//Determine the total cumulative gross of the Bond franchise, and console.log the result.
+
+let bondTotalGross = 0;
+
+for(i = 0; i < bondFilms.length; i++) {
+// /[\W_]/g will match non-word characters in a .replace. Here we are looking for the $ attached to gross string which is a non alphanumerical character
+  let bondGross = bondFilms[i].gross.replace(/\W/g, '');
+  let numberGross = parseInt(bondGross, 10);
+  bondTotalGross += numberGross;
+}
