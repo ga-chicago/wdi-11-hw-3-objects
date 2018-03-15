@@ -21,8 +21,8 @@ const studentNames = ["Hannah", "Ilyssa", "Marie", "Alexis", "Sam1", "Sam2", "Ir
 // A list of student names from our class, each with a location.
 // anonymous object
 const studentList = [{
-    name: Zoe
-    location: Evanston
+    name: "Zoe"
+    location: "Evanston"
   }]
 
 // A list of student names from our class, each with a location and each with a list of favorite tv shows.
@@ -255,4 +255,18 @@ for(i = 0; i < bondFilms.length; i++) {
   let bondGross = bondFilms[i].gross.replace(/\W/g, '');
   let numberGross = parseInt(bondGross, 10);
   bondTotalGross += numberGross;
+}
+
+//HUMDINGER challenge
+
+let bondActors = {
+
+}
+for (let i = 0; i < bondFilms.length; i++){
+  bondActors[bondFilms[i].actor] = []
+}
+let actorKey = Object.keys(bondActors)
+
+for(let i = 0; i < bondFilms.length; i++) {
+  bondActors[bondFilms[i].actor].push(bondFilms[i])
 }
