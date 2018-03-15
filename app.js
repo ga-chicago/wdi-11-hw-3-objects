@@ -115,6 +115,8 @@ const bondFilms = [
   { "title" : "License to Kill", "year" : 1989, "actor" : "Timothy Dalton", "gross" : "$285,157,191" }
 ];
 
+// bond titles
+
 const bondTitles = [];
 
 for (let i = 0; i < bondFilms.length; i++) {
@@ -123,6 +125,19 @@ for (let i = 0; i < bondFilms.length; i++) {
 		console.log(bondTitles);
 	}
 }
+
+// oddBonds
+
+const oddBonds = [];
+
+for (let i = 0; i < bondFilms.length; i++) {
+	if (bondFilms[i].year % 2 != 0) {
+		oddBonds.push(bondFilms[i].title);
+	}
+	if (i === (bondFilms.length - 1)) {
+		console.log(oddBonds);
+}
+
 
 
 
