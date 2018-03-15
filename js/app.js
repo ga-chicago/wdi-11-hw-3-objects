@@ -122,3 +122,4 @@ let totalGross = 1;
 for(let i = 0; i < numGross3.length; i++ ){
     totalGross += numGross3[i];
 }
+
