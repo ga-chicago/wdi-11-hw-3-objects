@@ -1,4 +1,6 @@
 /*
+DataTypes
+
 
 1.Boolean
 
@@ -56,10 +58,69 @@ const class = {
 }
 
 
-
-
-
-
-
-
 */
+
+
+
+//Take it Easy
+
+
+//1. 
+
+
+const rainbow = ['red','orange','yellow','blue','purple'];
+
+
+//2.
+
+
+rainbow[3];
+
+//3.
+
+const myself = {
+	favorite food: 'Lobster',
+	hobby: 'jiu jitsu',
+	town:'burbank',
+	datatype: 'objects'
+}
+
+//4.
+
+myself.hobby;
+//or
+myself['hobby'];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
