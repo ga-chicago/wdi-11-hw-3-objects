@@ -14,28 +14,28 @@
 // student name = array  studentNames = ["Sam", "Charlie", "Chelsea", "Frank"]
 //student name with location = objects in an array  //
 
-//  // const students  = [{
-// 	name: "Sam",
-// 	location: "Chicago"
-// }, {
-// 	name: "Charlie",
-// 	location: "Chicago "
-// },{
-// 	name: "Chelsea",
-// 	location: "Indianapolis"
-// }]
+ const students  = [{
+	name: "Sam",
+	location: "Chicago"
+}, {
+	name: "Charlie",
+	location: "Chicago "
+},{
+	name: "Chelsea",
+	location: "Indianapolis"
+}]
 
 
 // 
 
 // name with class location and tv shop = objects in an array
 
-// const student = [
-// {name: "Sam", location: "Chicago", favoriteTv: "The Offce"},
-// {name: "Charlie", location: "Chicago", favoriteTv: "The Wire"},
-// {name: "Chelea", location: "Indianapolis", favoriteTv: "Friends"} 
+const student = [
+{name: "Sam", location: "Chicago", favoriteTv: "The Offce"},
+{name: "Charlie", location: "Chicago", favoriteTv: "The Wire"},
+{name: "Chelea", location: "Indianapolis", favoriteTv: "Friends"} 
 
-// ];
+];
 
 
 const rainbow = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"]
@@ -121,5 +121,20 @@ for(let i =  0; i <= bondFilms.length; i++) {
 
 }
 
+// Determine the total cumulative gross of the Bond franchise, and console.log the result. hint To make the grosses into usable numbers, look into the .replace Javascript method (there are many ways to do this, however). Look into parseInt also.
+
+
+const totalCumulative = []
+
+for(let i = 0; i <= bondFilms.length; i++) {
+	console.log((bondFilms[i].gross))  // before making an array. 
+}
+
+
+for(let i = 0; i <= bondFilms.length; i++) {
+	console.log(totalCumulative.push(bondFilms[i].gross))  // Moved gross into an array
+}
+
+Number.parseInt(bondFilms[i].gross, [10]) // stuck here 
 
 
