@@ -170,8 +170,30 @@ for (let i = 0; i < bondFilms.length; i ++){
 console.log(oddBonds);
 
 
+//3.
+
+const gross = [];
+
+for (let i = 0; i < bondFilms.length; i ++){
+	let newGross = bondFilms[i].gross.replace('$','');
+	gross.push(parseInt(bondFilms[i].newGross))
 
 
+}
+
+
+for(let i = 0; i < gross.length; i ++){
+	gro
+}
+
+
+
+console.log(bondFilms)
+
+
+
+
+//Diiging
 
 
 
