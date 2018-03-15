@@ -195,13 +195,67 @@ for (i = 0; i < bondFilms.length; i++){
   };
 };
 
-// at this point grossInt[] has all the bondFilms.gross as integers in an array.
+// at this point grossInt[] has all the bondFilms.gross 
+// as integers in an array.
 // i just need to add them.
 
-// have to assign the total a value of 0 so it has an integer value 
+// I have to assign the total a value of 0 so it has an integer value 
 // and doesn't affect the sum value
+
 let totalGross = 0;
 
 for (i = 0; i < bondFilms.length; i++){
   totalGross += grossInt[i];
 };
+
+// DIGGING DEEPER
+
+// I somehow need to count the amount of times an actor appears
+// I need to find the lowest actor count and select that object
+// jamesBonds = {};
+
+// for (let key in bondFilms) {
+//   if (bondFilms(key).actor === "Roger Moore") {
+//     jamesBonds.actorOne = bondFilms(key);
+//   } else if (bondFilms(key).actor === "Sean Connery") {
+//     jamesBonds.actorTwo = bondFilms(key);
+//   } else if (bondFilms(key).actor === "Daniel Craig") {
+//     jamesBonds.actorThree = bondFilms(key);
+//   } else if (bondFilms(key).actor === "Timothy Dalton") {
+//     jamesBonds.actorFour = bondFilms(key);
+//   } else if (bondFilms(key).actor === "George Lazenby") {
+//   jamesBonds.actorFive = bondFilms(key);
+//   } else if (bondFilms(key).actor === "Pierce Brosnan") {
+//   jamesBonds.actorSix = bondFilms(key);
+//   }
+// };
+
+// actorOne = {};
+// actorTwo = {};
+// actorThree = {};
+// actorFour = {};
+// actorFive = {};
+// actorSix = {};
+// for (i = 0; i < bondFilms.length; i++){
+//   if (bondFilms[i].actor === "Roger Moore"){
+//     actorOne = {bondFilms[i]};
+//   } else if (bondFilms[i].actor === "Sean Connery"){
+//     actorTwo = {bondFilms[i]};
+//   } else if (bondFilms[i].actor === "Daniel Craig"){
+//     actorThree = {bondFilms[i]};  
+//   } else if (bondFilms[i].actor === "Timothy Dalton"){
+//     actorFour = {bondFilms[i]}
+//   } else if (bondFilms[i].actor === "George Lazenby"){
+//     actorFive.push(bondFilms[i]);
+//   } else if (bondFilms[i].actor === "Pierce Brosnan"){
+//     actorSix.push(bondFilms[i]);
+//   }
+// };
+
+let worstBond;
+
+for (i = 0; i < bondFilms.length; i++){
+
+}
+
+const worstBond = Math.min(actorOne.length, actorTwo.length, actorThree.length, actorFour.length, actorFive.length, actorSix.length);
