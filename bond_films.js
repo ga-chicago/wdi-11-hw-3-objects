@@ -40,7 +40,7 @@ const bondFilms = [
 const oddBonds = [];
 
 for (let i = 0; i < bondFilms.length; i++){
-    if (bondFilms[i].year % 2 === 0){
+    if (bondFilms[i].year % 2 === 1){
     //console.log("Number is Even")
     //console.log(oddBonds)
     oddBonds.push(bondFilms[i].year);
