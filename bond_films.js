@@ -25,19 +25,19 @@ const bondFilms = [
 ];
 
 
-//BONDTITLES
+// //BONDTITLES
 // const bondTitles = [];
 
-// for (let i = 0; i < bondFilms.length; i++){
-//   bondTitles.push(bondFilms[i].title);
-//   // console.log(bondFilms); //shows you all of the values each time it goes through 
-//   // console.log(title); //shows the keys
-//   console.log(bondTitles);
-// }
+for (let i = 0; i < bondFilms.length; i++){
+  bondTitles.push(bondFilms[i].title);
+  // console.log(bondFilms); //shows you all of the values each time it goes through 
+  // console.log(title); //shows the keys
+  console.log(bondTitles);
+}
 
-//ODDBONDS
+// //ODDBONDS
 
-const oddBonds = [];
+// const oddBonds = [];
 
 for (let i = 0; i < bondFilms.length; i++){
     if (bondFilms[i].year % 2 === 1){
@@ -48,3 +48,15 @@ for (let i = 0; i < bondFilms.length; i++){
 }
 
 console.log(oddBonds);
+
+// TOTALCUMULATIVEGROSS
+
+const totalGrossNum = 0;
+
+for (let i = 0; 1 < bondFilms.length; i++){
+  const grossNum = parseInt(bondFilms[i].gross);
+  console.log(grossNum);
+  totalGrossNum += grossNum; //Uncaught type error. Assignment to constant variable. 
+  console.log(totalGrossNum); //keeps spitting out Nan.
+}
+
