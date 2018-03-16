@@ -109,7 +109,7 @@ const inception = {
 inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = 'null'
 
 
-// 
+// Create a new array called bondTitles with only the titles of the Bond films, and console.log the new array.
 
 const bondFilms = [
   { "title" : "Skyfall", "year" : 2012, "actor" : "Daniel Craig", "gross" : "$1,108,561,008" },
@@ -146,8 +146,20 @@ for (var i = 0; i < bondFilms.length; i++) {
 
 console.log(bondTitles);
 
-//
+//Create a new array oddBonds, of only the Bond films released on odd-numbered years.
 
+var oddBonds = []
+
+const isOdd = (num) => {
+	 return num % 2 != 0
+}
+
+for (var i = 0; i < bondFilms.length; i++) {
+	if (isOdd(bondFilms[i].year)) {
+		oddBonds.push(bondFilms[i])		
+	}
+}
+console.log(oddBonds);
 
 
 
