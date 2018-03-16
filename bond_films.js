@@ -26,18 +26,18 @@ const bondFilms = [
 
 
 // //BONDTITLES
-// const bondTitles = [];
+const bondTitles = [];
 
 for (let i = 0; i < bondFilms.length; i++){
   bondTitles.push(bondFilms[i].title);
   // console.log(bondFilms); //shows you all of the values each time it goes through 
   // console.log(title); //shows the keys
-  console.log(bondTitles);
+  // console.log(bondTitles);
 }
 
 // //ODDBONDS
 
-// const oddBonds = [];
+const oddBonds = [];
 
 for (let i = 0; i < bondFilms.length; i++){
     if (bondFilms[i].year % 2 === 1){
@@ -46,6 +46,8 @@ for (let i = 0; i < bondFilms.length; i++){
     oddBonds.push(bondFilms[i].year);
   } 
 }
+
+//returns the number 16 and I'm not entirely sure why.
 
 console.log(oddBonds);
 
