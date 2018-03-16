@@ -143,7 +143,7 @@ const bondFilms = [
 // create an empty array first in a let variable
 let bondTitles = [];
 
-for (i = 0; i < bondFilms.length; i++){
+for (let i = 0; i < bondFilms.length; i++){
   // iterate through the titles and store it in the array you already made
   bondTitles.push(bondFilms[i]["title"]);
 };
@@ -154,7 +154,7 @@ console.log(bondTitles);
 
 let oddBonds = [];
 
-for (i = 0; i < bondFilms.length; i++){
+for (let i = 0; i < bondFilms.length; i++){
   if (bondFilms[i]["year"] % 2 === 1) {
     oddBonds.push(bondFilms[i])
   }
@@ -174,7 +174,7 @@ for (i = 0; i < bondFilms.length; i++){
 
 let usableGrossString = [];
 
-for (i = 0; i < bondFilms.length; i++){
+for (let i = 0; i < bondFilms.length; i++){
   // removes $ sign at beginning of gross
   while (bondFilms[i].gross.charAt(0) === '$'){
     bondFilms[i].gross = bondFilms[i].gross.substr(1);
@@ -189,7 +189,7 @@ for (i = 0; i < bondFilms.length; i++){
 
 let grossInt = [];
 
-for (i = 0; i < bondFilms.length; i++){
+for (let i = 0; i < bondFilms.length; i++){
   if (typeof(usableGrossString === 'string')){
     grossInt.push(parseInt(usableGrossString[i]));  
   };
@@ -204,58 +204,69 @@ for (i = 0; i < bondFilms.length; i++){
 
 let totalGross = 0;
 
-for (i = 0; i < bondFilms.length; i++){
+for (let i = 0; i < bondFilms.length; i++){
   totalGross += grossInt[i];
 };
+
+console.log(totalGross);
 
 // DIGGING DEEPER
 
 // I somehow need to count the amount of times an actor appears
 // I need to find the lowest actor count and select that object
-// jamesBonds = {};
 
-// for (let key in bondFilms) {
-//   if (bondFilms(key).actor === "Roger Moore") {
-//     jamesBonds.actorOne = bondFilms(key);
-//   } else if (bondFilms(key).actor === "Sean Connery") {
-//     jamesBonds.actorTwo = bondFilms(key);
-//   } else if (bondFilms(key).actor === "Daniel Craig") {
-//     jamesBonds.actorThree = bondFilms(key);
-//   } else if (bondFilms(key).actor === "Timothy Dalton") {
-//     jamesBonds.actorFour = bondFilms(key);
-//   } else if (bondFilms(key).actor === "George Lazenby") {
-//   jamesBonds.actorFive = bondFilms(key);
-//   } else if (bondFilms(key).actor === "Pierce Brosnan") {
-//   jamesBonds.actorSix = bondFilms(key);
-//   }
-// };
+// create object to store bondFilm.actor keys in
+// creating a first key/value so it won't read as undefined in the console
+const actorNames = {};
 
-// actorOne = {};
-// actorTwo = {};
-// actorThree = {};
-// actorFour = {};
-// actorFive = {};
-// actorSix = {};
-// for (i = 0; i < bondFilms.length; i++){
-//   if (bondFilms[i].actor === "Roger Moore"){
-//     actorOne = {bondFilms[i]};
-//   } else if (bondFilms[i].actor === "Sean Connery"){
-//     actorTwo = {bondFilms[i]};
-//   } else if (bondFilms[i].actor === "Daniel Craig"){
-//     actorThree = {bondFilms[i]};  
-//   } else if (bondFilms[i].actor === "Timothy Dalton"){
-//     actorFour = {bondFilms[i]}
-//   } else if (bondFilms[i].actor === "George Lazenby"){
-//     actorFive.push(bondFilms[i]);
-//   } else if (bondFilms[i].actor === "Pierce Brosnan"){
-//     actorSix.push(bondFilms[i]);
-//   }
-// };
+// add actor keys to bondActors object
+for (let i = 0; i < bondFilms.length; i++){
+  // console.log(bondFilms.actor);
+  if (actorNames.hasOwnProperty(bondFilms[i].actor)){
+    // if the loop has the property of an actor name
+    actorNames[bondFilms[i].actor] += 1;
+  } else {
+    // if the loop hasn't defined a particular actor yet
+    // for example, hasn't read "Sean Connery" yet
+    // without this condition, the if condition would never pass
+    actorNames[bondFilms[i].actor] = 1;
+  }
+  // have to use bracket notation for [bondFilms[i].actor] because it's a variable.
+  // if we used dot notation, the code would look for a key called bondFilms[i].actor;
+};
+// now we have an object actorNames populated with each key as an actors name
+// and the value being the amount of times they're in a film
+// console.log(actorNames);
+for (let i = 0; i < bondFilms.length; i++){
+  if (actorNames[bondFilms[i].actor] === Math.min(...Object.values(actorNames[bondFilms[i].actor]))) { 
+    console.log(bondFilms[i]);
+  }
+};
+// create function to find the name of the actor who appeared in least amount of movies
 
-// let worstBond;
+const getLeastFrequentActor = (actorNames) => {
+  // create array to store values of actorNames object populated earlier
+  const frequencyArray = Object.values(actorNames);
+  // frequencyArray = [3, 1, 4, 7, 6, 2]
+  // then we want to find the minimum value in the array
+  // store it in a variable min
+  const min = Math.min(...frequencyArray);
+  // iterate through actorNames object to check for which one
+  // has the minimum value
+  for (let prop in actorNames){
+    if(actorNames[prop] === min){
+      // console.log(prop, actorNames[prop]) <--- returns George Lazenby, 1
+      return prop;
+    }
+  }
+};
+// now we have a function that returns the least frequent actor, George
 
-// for (i = 0; i < bondFilms.length; i++){
 
-// }
-
-// const worstBond = Math.min(actorOne.length, actorTwo.length, actorThree.length, actorFour.length, actorFive.length, actorSix.length);
+// iterate through bondFilms and check for films with least frequent actor
+for (let i = 0; i < bondFilms.length; i++) {
+  // if the least frequent actor is the key, print that object on console
+  if (getLeastFrequentActor(actorNames) === bondFilms[i]["actor"]){
+    console.log(bondFilms[i]);
+  };
+};
