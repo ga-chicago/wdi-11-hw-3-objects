@@ -174,6 +174,38 @@ for (var i = 0; i < bondFilms.length; i++) {
 }
 console.log(grossIncome);
 
-///
+//Digging Deeper
+
+//Humdinger challenge
+
+// bondFilms again!
+// 
+// Console log the single movie object that contains the actor who starred in the least number of films.
+
+	/// ASK WHY IT WORKS ////
+
+const keyWithLeastValue = (obj) => {
+  return Object.keys(obj).reduce((a, b) => obj[a] < obj[b] ? a : b);
+}
+
+var actorCounts = {};
+
+for (let i in bondFilms) {
+  actorCounts[bondFilms[i].actor] = 0
+}
+
+for (let i in bondFilms) {
+  actorCounts[bondFilms[i].actor] += 1
+}
+
+for (let i in bondFilms) {
+  if (bondFilms[i].actor == keyWithLeastValue(actorCounts)) {
+    console.log(bondFilms[i])
+  }
+}
+
+
+////////
+
 
 
