@@ -154,10 +154,6 @@ for (let i = 0; i < bondFilms.length; i++) {
 	bondGross += parseInt(bondGrossArray[i]);
 }
 
-// console.log(grossArray);
-
-// I can't get rid of the commas. I don't know what I'm doing. I know how to do it once they're gone but I'm so tired. 
-
 
 
 // humdinger
@@ -215,3 +211,72 @@ for (let i = 0; i < bondFilms.length; i++) {
 // }
 // }}
 
+
+// SOLUTION FROM CLASS 
+
+const actorNames = {};
+
+for (let i = 0; i < bondFilms.length; i++){ 
+	if (actorNames.hasOwnProperty(bondFilms[i].actor)) {
+		//if our actNames object doe have a property with the actors name 
+		actorNames[bondFilms[i].actor] += 1
+	} else {
+		actorNames[bondFilms[i].actor] = 1;
+	}
+
+	// find which actor has the lowest count
+
+
+	// find that string in the array and console.log that string
+}
+
+const getLeastFrequentActor = (actorNames) => {
+	//let num = 0;
+
+	// we want to create an array of all the values in aactorNames
+	const frequencyArray = Object.values(actorNames);
+	// returns array [3,1,4,7,6,2]
+	// then we want to find the minimum value in that array
+	const min = Math.min(...frequencyArray);
+	// outputs 1
+	for (let prop in actorNames) {
+		if (actorNames[prop] === min) {
+			return prop
+		}
+	}
+}
+
+for (let j = 0; j < bondFilms.length; j++)
+	if (getLeastFrequentActor(actorNames) === bondFilms[j].actor) {
+		console.log(bondFilms[j])
+}
+
+
+
+
+// for (let j = 0; j < bondFilms.length; j++) {
+// 	if (actorNames[bondFilms[j].actor] === 1) {
+// 		console.log(bondFilms[j])
+// 	}
+// }
+
+
+
+
+
+
+
+// 	const bondName = bondFilms[i].actor;
+// 	// console.log(bondFilms[i].actor)
+// 	actorNames[bondName] = 0;
+
+
+// 	for (let prop in actorNames) {
+// 		if (actorNames.bondName === 0) {
+// 			actorNames[bondName] = 1;
+// 		} else if (actorNames.bondName >= 1) {
+// 			actorNames[bondName] += 1;
+// 		}
+// 	}
+// 	console.log(actorNames)
+// }
